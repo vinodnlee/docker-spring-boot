@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vinodnleedockerspringboot 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vinodnleedockerspringboot
+  template:
+    metadata:
+      labels:
+        app: vinodnleedockerspringboot 
+    spec:
+      containers:
+        - name: vinodnleedockerspringboot 
+          image: testrgcluster2.azurecr.io/vinodnleedockerspringboot
+          ports:
+          - containerPort: 8888
